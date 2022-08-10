@@ -1,0 +1,8 @@
+require_relative "./packets/basic_packet"
+require_relative "./packets/welcome_packet"
+require_relative "./packets/move_packet"
+require_relative "./packets/player_spawn_packet"
+require_relative "./packets/sync_state_packet"
+require_relative "./packets/action_packet"
+require_relative "./packets/reaction_packet"
+require_relative "./packets/reaction_result_packet"

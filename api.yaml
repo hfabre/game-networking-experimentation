@@ -1,0 +1,59 @@
+openapi: "3.0.3"
+info:
+  title: tourdumondiste API
+  version: "1.0.0"
+  description: >
+    # Introduction
+
+    The tourdumondiste API is built on HTTP.  Our API is RESTful.
+    It has predictable resource URLs.
+    It returns HTTP response codes to indicate errors.  It also
+    accepts and returns JSON in the HTTP body.
+    You can use your favorite HTTP/REST library for your programming language to use this API.
+
+
+    # Authentication
+
+    TODO
+servers:
+  - url: https://tourdumondiste.syn/1.0.0
+    description: "local env"
+paths:
+  /comparators/${slug}:
+    get:
+      tags:
+        - Comparators
+      summary: Show comparator values
+      operationId: GetComparator
+      description: Show comparator values
+      parameters:
+        - in: path
+          name: slug
+          schema:
+            type: string
+          required: true
+          description: Comparator's slug
+        - in: query
+          name: full
+          schema:
+            type: boolean
+          description: Get all values or only the one from the light version
+        - in: query
+            name: company_ids
+            schema:
+              type: array
+              items:
+                type: integer
+            description: Filter on given companies
+        - in: query
+            name: search
+            schema:
+              "#/components/schemas/SearchQuery"
+      responses:
+        '200':
+          description: OK
+components:
+  schemas:
+    SearchQuery:
+      schema:
+
