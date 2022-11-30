@@ -104,7 +104,7 @@ OptionParser.new do |opts|
   opts.on("-f PACKET_LOSS_PERCENTAGE", "--packet_loss PACKET_LOSS_PERCENTAGE", "Simulated packet loss percentage (%)", Integer)
   opts.on("-l PING", "--ping PING", "Simulated latency (ms)", Integer)
   opts.on("-s", "--sync", "Should syncronize state")
-  opts.on("-i", "--lerp", "Should syncronize state with linear interpolation")
+  opts.on("-i", "--lerp", "Should syncronize state with linear interpolation, do nothing without sync (-s) option")
   opts.on("-n", "--network", "Run in networked mode")
   opts.on("-h", "--help", "Prints this help") do
     puts opts

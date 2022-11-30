@@ -48,7 +48,7 @@ Usage: client [options]
         --packet_loss
     -l, --ping PING                  Simulated latency (ms)
     -s, --sync                       Should syncronize state
-    -i, --lerp                       Should syncronize state with linear interpolation
+    -i, --lerp                       Should syncronize state with linear interpolation, do nothing without sync (-s) option
     -n, --network                    Run in networked mode
     -h, --help                       Prints this help
 ```

@@ -31,7 +31,7 @@ module HugoCo
 
         # Since at the moment we don't handle packet acknowledgement, avoid to skip important packets (welcome, player_spawn)
         if @packets_to_not_skip.include?(data.split(";")[0].to_i) || rand > (@packet_loss / 100.0)
-          sleep(@ping / 1000) if @ping > 0
+          sleep(@ping / 1000.0) if @ping > 0
           @socket.send(data, 0, client.host, client.port)
         end
       end
