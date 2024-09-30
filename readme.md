@@ -1,4 +1,4 @@
-# HugoCo
+# Game nextworking experimentation
 
 The idea behind this project is to implement a simple game (platformer) with network ability and an authoritative server.
 It aims to be a sandbox to test how various network optimization techniques can
