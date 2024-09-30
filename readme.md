@@ -14,7 +14,7 @@ Keep in mind I want this project to stay as simple as possible so I won't look t
 Clone the repository
 
 ```sh
-cd hugoco
+cd game-networking-experimentation
 bundle install
 ```
 
